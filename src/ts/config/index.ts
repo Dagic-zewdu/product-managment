@@ -22,3 +22,4 @@ export const fireBaseApp = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(fireBaseApp);
 export const db = getFirestore();
 export const productsCollection = collection(db, 'products');
+export const categoryCollection = collection(db, 'Category');
