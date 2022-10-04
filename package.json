@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "clean-webpack-plugin": "^4.0.0",
+    "firebase": "^9.10.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
     "ts-loader": "^9.4.1",
