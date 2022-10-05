@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/Dagic-zewdu/js-lintor-template#readme",
   "devDependencies": {
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.6.0",
     "eslint": "^7.32.0",
@@ -39,10 +41,17 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
+    "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
     "firebase": "^9.10.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.1",
     "ts-loader": "^9.4.1",
     "webpack-merge": "^5.8.0"
   }

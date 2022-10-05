@@ -2,20 +2,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: './src/ts/app.ts',
-    products: './src/ts/products/index.ts',
+    index: './src/index.tsx',
   },
   plugins: [new HtmlWebpackPlugin({
-    template: './src/index.html',
+    template: './public/index.html',
     inject: true,
     chunks: ['index'],
     filename: 'index.html',
-  }),
-  new HtmlWebpackPlugin({
-    template: './src/products.html',
-    inject: true,
-    chunks: ['products'],
-    filename: 'products.html',
   }),
   ],
   module: {
@@ -23,6 +16,11 @@ module.exports = {
       {
         test: /\.html$/,
         use: ['html-loader'],
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
       },
       {
         test: /\.tsx?$/,
@@ -42,6 +40,6 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.jsx', '.ts', '.js'],
   },
 };
