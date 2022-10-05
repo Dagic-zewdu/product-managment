@@ -5,7 +5,7 @@ import Pages from './pages';
 function App() {
   return (
     <BrowserRouter>
-    
+      <Pages />
     </BrowserRouter>
   );
 }
