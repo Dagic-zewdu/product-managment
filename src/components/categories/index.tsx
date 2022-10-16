@@ -1,7 +1,8 @@
 import React from 'react';
+import AllContainer from '../layout/AllContainer';
 
 function Categories() {
-  return <div>Categories</div>;
+  return <AllContainer>Categories</AllContainer>;
 }
 
 export default Categories;
