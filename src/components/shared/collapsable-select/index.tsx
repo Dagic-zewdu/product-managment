@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 type props = {
   title: string;
   options?: Array<{ name: string; linkName: string }>;
-  icon: JSX.Element;
+  icon?: JSX.Element;
 };
 function CollapsableNavigation({ title, options, icon }: props) {
   const [show, setShow] = useState<boolean>(false);

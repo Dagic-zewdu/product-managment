@@ -32,60 +32,14 @@ function SideNav({ toggle }: props) {
                 <span>Dashboard</span>
               </a>
             </li>
-
-            <li className="sidebar-item  has-sub">
-              <a href="#" className="sidebar-link">
-                <i className="bi bi-stack"></i>
-                <span>Components</span>
-              </a>
-              <ul className="submenu ">
-                <li className="submenu-item ">
-                  <a href="component-alert.html">Alert</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="component-badge.html">Badge</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="component-breadcrumb.html">Breadcrumb</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="component-button.html">Button</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="component-card.html">Card</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="component-carousel.html">Carousel</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="component-dropdown.html">Dropdown</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="component-list-group.html">List Group</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="component-modal.html">Modal</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="component-navs.html">Navs</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="component-pagination.html">Pagination</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="component-progress.html">Progress</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="component-spinner.html">Spinner</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="component-tooltip.html">Tooltip</a>
-                </li>
-              </ul>
-            </li>
+            <CollapsableNavigation
+              title="Products"
+              icon={<i className="fa-brands fa-product-hunt"></i>}
+              options={[{ name: 'Add Products', linkName: '/addProducts' }]}
+            />
             <CollapsableNavigation
               title="sells"
-              options={[{ name: 'Add sells', linkName: '/addSells' }]}
+              options={[{ name: 'Add Sells', linkName: '/addSells' }]}
               icon={<i className="fa-sharp fa-solid fa-cash-register"></i>}
             />
 
