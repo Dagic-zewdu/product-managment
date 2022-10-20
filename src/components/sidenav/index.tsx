@@ -1,5 +1,6 @@
 import React from 'react';
-import {Link} from "react-router-dom"
+import { Link } from 'react-router-dom';
+import CollapsableNavigation from '../shared/collapsable-select';
 type props = {
   toggle: boolean;
 };
@@ -82,30 +83,10 @@ function SideNav({ toggle }: props) {
                 </li>
               </ul>
             </li>
-
-            <li className="sidebar-item  has-sub">
-              <a href="#" className="sidebar-link">
-                <i className="bi bi-collection-fill"></i>
-                <span>Extra Components</span>
-              </a>
-              <ul className="submenu ">
-                <li className="submenu-item ">
-                  <a href="extra-component-avatar.html">Avatar</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="extra-component-sweetalert.html">Sweet Alert</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="extra-component-toastify.html">Toastify</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="extra-component-rating.html">Rating</a>
-                </li>
-                <li className="submenu-item ">
-                  <a href="extra-component-divider.html">Divider</a>
-                </li>
-              </ul>
-            </li>
+            <CollapsableNavigation
+              title="sells"
+              options={[{ name: 'Add sells', linkName: '/addSells' }]}
+            />
 
             <li className="sidebar-item  has-sub">
               <a href="#" className="sidebar-link">

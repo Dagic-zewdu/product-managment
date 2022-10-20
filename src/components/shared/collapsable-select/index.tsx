@@ -5,7 +5,7 @@ type props = {
   title: string;
   options?: Array<{ name: string; linkName: string }>;
 };
-function CollapsableSelect({ title, options }: props) {
+function CollapsableNavigation({ title, options }: props) {
   const [show, setShow] = useState<boolean>(false);
   return (
     <li className="sidebar-item  has-sub">
@@ -24,4 +24,4 @@ function CollapsableSelect({ title, options }: props) {
   );
 }
 
-export default CollapsableSelect;
+export default CollapsableNavigation;
