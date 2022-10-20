@@ -1,8 +1,10 @@
 import React from 'react';
-
-function SideNav() {
+type props = {
+  toggle: boolean;
+};
+function SideNav({ toggle }: props) {
   return (
-    <div id="sidebar" className="active">
+    <div id="sidebar" className={`${toggle ? 'active' : ''}`}>
       <div className="sidebar-wrapper active">
         <div className="sidebar-header">
           <div className="d-flex justify-content-between">
