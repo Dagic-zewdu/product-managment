@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 type props = {
   title: string;
   options?: Array<{ name: string; linkName: string }>;
+  icon: JSX.Element;
 };
-function CollapsableNavigation({ title, options }: props) {
+function CollapsableNavigation({ title, options, icon }: props) {
   const [show, setShow] = useState<boolean>(false);
   return (
     <li className="sidebar-item  has-sub">
       <div className="sidebar-link" onClick={() => setShow((s: boolean) => !s)}>
-        <i className="bi bi-stack"></i>
+        {icon}
         <span>{title}</span>
       </div>
       <ul className={`submenu ${show ? 'active' : ''}`}>

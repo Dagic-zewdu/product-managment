@@ -86,6 +86,7 @@ function SideNav({ toggle }: props) {
             <CollapsableNavigation
               title="sells"
               options={[{ name: 'Add sells', linkName: '/addSells' }]}
+              icon={<i className="fa-sharp fa-solid fa-cash-register"></i>}
             />
 
             <li className="sidebar-item  has-sub">
