@@ -3,6 +3,7 @@ import { useOnClickOutside } from 'usehooks-ts';
 import useWindowSize from '../../hooks/useWindowSize';
 import Navbar from '../navbar';
 import SideNav from '../sidenav';
+import styles from './index.module.scss';
 
 type container = {
   children: React.ReactNode;
@@ -27,11 +28,16 @@ function AllContainer({ children }: container) {
     <React.Fragment>
       <SideNav toggle={toggle} />
       <div id="main">
-        {button && (
-          <button className="" ref={ref} onClick={() => setToggle(true)}>
-            <i className="fa-solid fa-bars"></i>
-          </button>
-        )}
+        <header className="d-flex justify-content-between align-items-center">
+          <div className="">
+            {button && (
+              <div className={styles.toggleButton} ref={ref} onClick={() => setToggle(true)}>
+                <i className="fa-solid fa-bars fa-2x"></i>
+              </div>
+            )}
+          </div>
+          
+        </header>
         {children}
       </div>
     </React.Fragment>
