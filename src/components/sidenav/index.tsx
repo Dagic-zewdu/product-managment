@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom"
 type props = {
   toggle: boolean;
 };
@@ -9,9 +10,9 @@ function SideNav({ toggle }: props) {
         <div className="sidebar-header">
           <div className="d-flex justify-content-between">
             <div className="logo">
-              <a href="index.html">
+              <Link to="/">
                 <img src="assets/images/logo/logo.png" alt="Logo" />
-              </a>
+              </Link>
             </div>
             <div className="toggler">
               <a href="#" className="sidebar-hide d-xl-none d-block">
