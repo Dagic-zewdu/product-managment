@@ -27,7 +27,7 @@ function SideNav({ toggle, setToggle }: props) {
           <ul className="menu">
             <li className="sidebar-title">Menu</li>
 
-            <li className="sidebar-item active ">
+            <li className="sidebar-item">
               <a href="index.html" className="sidebar-link">
                 <i className="bi bi-grid-fill"></i>
                 <span>Dashboard</span>
@@ -36,14 +36,22 @@ function SideNav({ toggle, setToggle }: props) {
             <CollapsableNavigation
               title="Products"
               icon={<i className="fa-brands fa-product-hunt"></i>}
-              options={[{ name: 'Add Products', linkName: '/addProducts' }]}
+              options={[
+                { name: 'Add Products', linkName: '/addProducts' },
+                { name: 'All Products', linkName: '/products' },
+              ]}
               setToggle={setToggle}
+              expanded
             />
             <CollapsableNavigation
               title="sells"
-              options={[{ name: 'Add Sells', linkName: '/addSells' }]}
+              options={[
+                { name: 'Add Sells', linkName: '/addSells' },
+                { name: 'All Sells', linkName: '/sells' },
+              ]}
               icon={<i className="fa-sharp fa-solid fa-cash-register"></i>}
               setToggle={setToggle}
+              expanded
             />
 
             <li className="sidebar-item  has-sub">

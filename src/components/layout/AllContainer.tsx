@@ -21,8 +21,9 @@ function AllContainer({ children }: container) {
     }
   }, [width]);
   const closeSideNav = () => {
-    if (width > 1999) return;
-    setToggle(false);
+    if (width > 1199) {
+      return;
+    } else setToggle(false);
   };
   return (
     <React.Fragment>
