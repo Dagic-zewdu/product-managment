@@ -4,14 +4,14 @@ import { useLocation, useSearchParams } from 'react-router-dom';
 import useQuery from '../../../../hooks/useQuery';
 
 function AddProductsTabs() {
-  const [tab, setTabs] = useState('single');
+  const { search } = useLocation();
+  const query = search.split('=')[1];
+  const [tab, setTabs] = useState(query ? query : 'single');
   let [searchParams, setSearchParams] = useSearchParams();
   const handleTabChange = (event: any) => {
     setTabs(event);
     setSearchParams({ tab: event });
   };
-  const { search } = useLocation();
-  const query = search.split('=')[1];
   useEffect(() => {
     setTabs(query);
   }, [query]);
