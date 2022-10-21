@@ -5,9 +5,11 @@ type props = {
   title: string;
   options?: Array<{ name: string; linkName: string }>;
   icon?: JSX.Element;
+  expanded?: boolean;
+  setToggle: Function
 };
-function CollapsableNavigation({ title, options, icon }: props) {
-  const [show, setShow] = useState<boolean>(false);
+function CollapsableNavigation({ title, options, icon, expanded = false,setToggle }: props) {
+  const [show, setShow] = useState<boolean>(expanded);
   return (
     <li className="sidebar-item  has-sub">
       <div className="sidebar-link" onClick={() => setShow((s: boolean) => !s)}>
@@ -16,8 +18,8 @@ function CollapsableNavigation({ title, options, icon }: props) {
       </div>
       <ul className={`submenu ${show ? 'active' : ''}`}>
         {options?.map(({ name, linkName }, index) => (
-          <li className="submenu-item" key={index}>
-            <Link to={`/${linkName}`}>{name}</Link>
+          <li className="submenu-item" key={index} onClick={()=>setToggle(false)}>
+            <Link to={linkName}>{name}</Link>
           </li>
         ))}
       </ul>

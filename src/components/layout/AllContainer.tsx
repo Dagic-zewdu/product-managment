@@ -12,7 +12,6 @@ function AllContainer({ children }: container) {
   const [toggle, setToggle] = useState<boolean>(true);
   const [button, showButton] = useState<boolean>(false);
   const ref: any = useRef();
-  useOnClickOutside(ref, () => setToggle(false));
   const { width } = useWindowSize();
   useEffect(() => {
     if (width > 1199) {
@@ -23,22 +22,24 @@ function AllContainer({ children }: container) {
       setToggle(false);
     }
   }, [width]);
-  console.log(width);
+  const closeSideNav = () => {
+    if (width > 1999) return;
+    setToggle(false);
+  };
   return (
     <React.Fragment>
-      <SideNav toggle={toggle} />
+      <SideNav toggle={toggle} setToggle={closeSideNav} />
       <div id="main">
         <header className="d-flex justify-content-between align-items-center">
           <div className="">
             {button && (
-              <div className={styles.toggleButton} ref={ref} onClick={() => setToggle(true)}>
+              <div className={styles.toggleButton} onClick={() => setToggle(true)}>
                 <i className="fa-solid fa-bars fa-2x"></i>
               </div>
             )}
           </div>
-          
         </header>
-        {children}
+        <section id="body">{children}</section>
       </div>
     </React.Fragment>
   );

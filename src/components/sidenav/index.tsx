@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import CollapsableNavigation from '../shared/collapsable-select';
 type props = {
   toggle: boolean;
+  setToggle: Function;
 };
-function SideNav({ toggle }: props) {
+function SideNav({ toggle, setToggle }: props) {
   return (
     <div id="sidebar" className={`${toggle ? 'active' : ''}`}>
       <div className="sidebar-wrapper active">
@@ -36,11 +37,13 @@ function SideNav({ toggle }: props) {
               title="Products"
               icon={<i className="fa-brands fa-product-hunt"></i>}
               options={[{ name: 'Add Products', linkName: '/addProducts' }]}
+              setToggle={setToggle}
             />
             <CollapsableNavigation
               title="sells"
               options={[{ name: 'Add Sells', linkName: '/addSells' }]}
               icon={<i className="fa-sharp fa-solid fa-cash-register"></i>}
+              setToggle={setToggle}
             />
 
             <li className="sidebar-item  has-sub">
