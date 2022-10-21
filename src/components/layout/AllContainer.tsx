@@ -1,7 +1,5 @@
-import React, { Children, RefObject, useEffect, useRef, useState } from 'react';
-import { useOnClickOutside } from 'usehooks-ts';
+import React, { useEffect, useRef, useState } from 'react';
 import useWindowSize from '../../hooks/useWindowSize';
-import Navbar from '../navbar';
 import SideNav from '../sidenav';
 import styles from './index.module.scss';
 
