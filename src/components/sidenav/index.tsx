@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import CollapsableNavigation from '../shared/collapsable-select';
 type props = {
   toggle: boolean;
   setToggle: Function;
 };
 function SideNav({ toggle, setToggle }: props) {
+  const location = useLocation();
+  const pathname = location?.pathname;
   return (
     <div id="sidebar" className={`${toggle ? 'active' : ''}`}>
       <div className="sidebar-wrapper active">
@@ -27,11 +29,11 @@ function SideNav({ toggle, setToggle }: props) {
           <ul className="menu">
             <li className="sidebar-title">Menu</li>
 
-            <li className="sidebar-item">
-              <a href="index.html" className="sidebar-link">
+            <li className={`sidebar-item ${pathname === '/' ? 'active' : ''}`}>
+              <Link to="/" className="sidebar-link">
                 <i className="bi bi-grid-fill"></i>
                 <span>Dashboard</span>
-              </a>
+              </Link>
             </li>
             <CollapsableNavigation
               title="Products"
