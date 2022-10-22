@@ -4,7 +4,7 @@ export interface ProductInterface {
   UnitPrice: 0;
   SellingPrice: 0;
   CategoryId: '';
-  Files: [];
+  image: File;
   tax?: () => number;
   CostPrice?: () => number;
   total?: () => number;
