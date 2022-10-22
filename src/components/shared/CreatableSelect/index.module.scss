@@ -3,6 +3,7 @@
     align-items: center;
     height: 50px;
     gap: 16px;
+    padding: 10px;
 }
 
 .inputSelectIcon {
@@ -12,11 +13,12 @@
     border-radius: 30px;
     align-items: center;
     justify-content: center;
-    color: "lightblue";
+    background-color: rgb(220, 224, 250);
 }
 
 .inputIconImage {
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    object-fit: cover;
 }
