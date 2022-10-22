@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Tab, Tabs } from 'react-bootstrap';
 import { useLocation, useSearchParams } from 'react-router-dom';
-import { AddProductContext } from '../../../../context';
+import { AddProductContext } from '../../../../context/product';
 
 function AddProductsTabs() {
   const { tab, setTabs, query } = useContext(AddProductContext);

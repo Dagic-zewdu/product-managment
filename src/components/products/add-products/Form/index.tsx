@@ -3,6 +3,7 @@ import Input from '../../../shared/Input';
 import UploadImage from '../uploadImage';
 
 function AddProductForm() {
+
   return (
     <div className="row">
       <div className="col-lg-6 mb-3">
