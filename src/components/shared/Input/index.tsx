@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
-  size: 'sm' | 'lg' | undefined;
+  size: 'sm' | 'lg' | undefined | any;
   value: string | number | string[] | undefined;
 }
 function Input({ label, type, ...props }: Props) {
