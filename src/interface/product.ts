@@ -5,6 +5,7 @@ export interface ProductInterface {
   SellingPrice: 0;
   CategoryId: '';
   image: File;
+  
   tax?: () => number;
   CostPrice?: () => number;
   total?: () => number;
