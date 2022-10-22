@@ -1,15 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Tab, Tabs } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
 import { AddProductContext } from '../../../context';
 import AllContainer from '../../layout/AllContainer';
 import AddProductsTabs from './tabs';
 
 function AddProducts() {
-  const [tab, setTab] = useState('single');
-
+  const { search } = useLocation();
+  const query = search.split('=')[1];
+  const [tab, setTabs] = useState(query ? query : 'single');
+  const value = useMemo(() => {
+    return { tab, setTabs, query };
+  }, [tab, query]);
   return (
     <AllContainer>
-      <AddProductsTabs />
+      <AddProductContext.Provider value={value}>
+        <AddProductsTabs />
+      </AddProductContext.Provider>
     </AllContainer>
   );
 }

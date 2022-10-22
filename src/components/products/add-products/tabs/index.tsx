@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Tab, Tabs } from 'react-bootstrap';
 import { useLocation, useSearchParams } from 'react-router-dom';
+import { AddProductContext } from '../../../../context';
 import useQuery from '../../../../hooks/useQuery';
 
 function AddProductsTabs() {
-  const { search } = useLocation();
-  const query = search.split('=')[1];
-  const [tab, setTabs] = useState(query ? query : 'single');
+  const { tab, setTabs, query } = useContext(AddProductContext);
   let [searchParams, setSearchParams] = useSearchParams();
   const handleTabChange = (event: any) => {
     setTabs(event);
