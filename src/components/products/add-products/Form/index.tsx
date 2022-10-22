@@ -5,10 +5,10 @@ import UploadImage from '../uploadImage';
 function AddProductForm() {
   return (
     <div className="row">
-      <div className="col-lg-6">
-        <UploadImage  />
+      <div className="col-lg-6 mb-3">
+        <UploadImage />
       </div>
-      <div className="col-lg-6">
+      <div className="col-lg-5">
         <Input label="Name" />
         <Input label="Quantity" type="number" />
         <Input label="Unit Price" min={1} type="number" className="" />

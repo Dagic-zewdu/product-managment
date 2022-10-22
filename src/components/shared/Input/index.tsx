@@ -6,12 +6,32 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   size?: 'sm' | 'lg' | undefined | any;
   value?: string | number | string[] | undefined;
+  error?: string;
 }
-function Input({ label, type,className, ...props }: Props) {
+function Input({ label, type, className, error, ...props }: Props) {
   return (
-    <FloatingLabel controlId="floatingInput" label={label} className={`custom-input ${className}`}>
-      <Form.Control type={type} {...props} placeholder={label} className={`w-100 ${className}`} />
-    </FloatingLabel>
+    <React.Fragment>
+      <FloatingLabel
+        controlId="floatingInput"
+        label={label}
+        style={{ color: error ? '#ca1c20' : '' }}
+        className={`custom-input ${className}`}
+      >
+        <Form.Control
+          type={type}
+          {...props}
+          placeholder={label}
+          style={{ border: error ? '1px solid #ca1c20' : '' }}
+        />
+      </FloatingLabel>
+      <div className="mb-3">
+        {error && (
+          <p className="text-danger">
+            <small>{error}</small>
+          </p>
+        )}
+      </div>
+    </React.Fragment>
   );
 }
 

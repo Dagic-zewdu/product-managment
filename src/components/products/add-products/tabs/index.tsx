@@ -16,7 +16,7 @@ function AddProductsTabs() {
     setTabs(query);
   }, [query]);
   return (
-    <div className="d-flex align-items-center justify-content-center w-100">
+    <div className="d-flex align-items-center justify-content-start w-100">
       <Tabs
         defaultActiveKey={tab}
         id="uncontrolled-tab-example"
@@ -24,11 +24,9 @@ function AddProductsTabs() {
         onSelect={(e) => handleTabChange(e)}
         className="mb-3"
       >
-        <Tab eventKey="single" title="Add Single Product">
-        
-        </Tab>
-        <Tab eventKey="bundle" title="Add Bundle Product"></Tab>
-        <Tab eventKey="quantity" title="Add Quantity to exist product"></Tab>
+        <Tab eventKey="single" title="Single"></Tab>
+        <Tab eventKey="bundle" title="Bundle"></Tab>
+        <Tab eventKey="quantity" title="Update Quantity"></Tab>
       </Tabs>
     </div>
   );

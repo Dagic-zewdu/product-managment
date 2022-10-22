@@ -15,6 +15,7 @@ function AddProducts() {
   }, [tab, query]);
   return (
     <AllContainer>
+      <h1 className="display-4 mb-3">Add Product</h1>
       <AddProductContext.Provider value={value}>
         <AddProductsTabs />
         <AddProductForm />
