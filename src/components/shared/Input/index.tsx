@@ -9,8 +9,8 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 }
 function Input({ label, type, ...props }: Props) {
   return (
-    <FloatingLabel controlId="floatingInput" label={label} className="mb-3">
-      <Form.Control type={type} {...props} placeholder={label} />
+    <FloatingLabel controlId="floatingInput" label={label} className="custom-input">
+      <Form.Control type={type} {...props} placeholder={label} className="custom-input w-100" />
     </FloatingLabel>
   );
 }
