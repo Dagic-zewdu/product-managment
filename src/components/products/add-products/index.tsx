@@ -3,6 +3,7 @@ import { Tab, Tabs } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { AddProductContext } from '../../../context';
 import AllContainer from '../../layout/AllContainer';
+import AddProductForm from './Form';
 import AddProductsTabs from './tabs';
 
 function AddProducts() {
@@ -16,6 +17,7 @@ function AddProducts() {
     <AllContainer>
       <AddProductContext.Provider value={value}>
         <AddProductsTabs />
+        <AddProductForm />
       </AddProductContext.Provider>
     </AllContainer>
   );

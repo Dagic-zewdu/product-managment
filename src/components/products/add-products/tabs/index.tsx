@@ -3,6 +3,7 @@ import { Tab, Tabs } from 'react-bootstrap';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { AddProductContext } from '../../../../context';
 import useQuery from '../../../../hooks/useQuery';
+import AddProductForm from '../Form';
 
 function AddProductsTabs() {
   const { tab, setTabs, query } = useContext(AddProductContext);
@@ -23,7 +24,9 @@ function AddProductsTabs() {
         onSelect={(e) => handleTabChange(e)}
         className="mb-3"
       >
-        <Tab eventKey="single" title="Add Single Product"></Tab>
+        <Tab eventKey="single" title="Add Single Product">
+        
+        </Tab>
         <Tab eventKey="bundle" title="Add Bundle Product"></Tab>
         <Tab eventKey="quantity" title="Add Quantity to exist product"></Tab>
       </Tabs>
