@@ -1,0 +1,22 @@
+.selectInputContainer {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    gap: 16px;
+}
+
+.inputSelectIcon {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    color: "lightblue";
+}
+
+.inputIconImage {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}

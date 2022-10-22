@@ -25,11 +25,12 @@ function Input({ label, type, className, error, ...props }: Props) {
         />
       </FloatingLabel>
       <div className="mb-3">
-        {!!error?.length && error.map(err=> ( 
-          <p className="text-danger">
-            <small>{err}</small>
-          </p>
-        )}
+        {!!error?.length &&
+          error.map((err) => (
+            <p className="text-danger">
+              <small>{err}</small>
+            </p>
+          ))}
       </div>
     </React.Fragment>
   );
