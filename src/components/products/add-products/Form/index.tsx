@@ -1,11 +1,12 @@
 import React from 'react';
 import Input from '../../../shared/Input';
+import UploadImage from '../uploadImage';
 
 function AddProductForm() {
   return (
     <div className="row">
       <div className="col-lg-6">
-        
+        <UploadImage  />
       </div>
       <div className="col-lg-6">
         <Input label="Name" />
