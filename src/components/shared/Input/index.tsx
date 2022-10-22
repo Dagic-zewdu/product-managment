@@ -7,10 +7,10 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   size?: 'sm' | 'lg' | undefined | any;
   value?: string | number | string[] | undefined;
 }
-function Input({ label, type, ...props }: Props) {
+function Input({ label, type,className, ...props }: Props) {
   return (
-    <FloatingLabel controlId="floatingInput" label={label} className="custom-input">
-      <Form.Control type={type} {...props} placeholder={label} className="custom-input w-100" />
+    <FloatingLabel controlId="floatingInput" label={label} className={`custom-input ${className}`}>
+      <Form.Control type={type} {...props} placeholder={label} className={`w-100 ${className}`} />
     </FloatingLabel>
   );
 }
