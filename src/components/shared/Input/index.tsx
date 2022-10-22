@@ -6,7 +6,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   size?: 'sm' | 'lg' | undefined | any;
   value?: string | number | string[] | undefined;
-  error?: string;
+  error?: Array<string>;
 }
 function Input({ label, type, className, error, ...props }: Props) {
   return (
@@ -25,9 +25,9 @@ function Input({ label, type, className, error, ...props }: Props) {
         />
       </FloatingLabel>
       <div className="mb-3">
-        {error && (
+        {!!error?.length && error.map(err=> ( 
           <p className="text-danger">
-            <small>{error}</small>
+            <small>{err}</small>
           </p>
         )}
       </div>
