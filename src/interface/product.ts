@@ -14,4 +14,5 @@ export interface AddProductInterfaceContext extends ProductInterface {
   tab: string;
   setTabs: Function;
   query: string;
+  setState: Function;
 }

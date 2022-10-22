@@ -8,11 +8,11 @@ function UploadImage() {
       {({ getRootProps, getInputProps }) => (
         <section>
           <div {...getRootProps()}>
-            <input {...getInputProps()} multiple accept="image/*" />
+            <input {...getInputProps()} accept="image/*" />
             <div className={styles.uploadZone}>
               <i className="fa-sharp fa-solid fa-images fa-4x"></i>
-              <p> Add product images.</p>
-              Drag your images here or <u> Click here </u> to select
+              <p> Add product Image.</p>
+              Drag your image here or <u> Click here </u> to select
             </div>
           </div>
         </section>
