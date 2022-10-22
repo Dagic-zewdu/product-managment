@@ -3,7 +3,7 @@ import CustomCreatableSelect from '../../../shared/CreatableSelect';
 import Input from '../../../shared/Input';
 import UploadImage from '../uploadImage';
 const options = [
-  { label: 'Tv', value: 1 },
+  { label: 'Tv', value: 1, icon: 'https://www.svgrepo.com/show/4270/television.svg' },
   { label: 'refrigerator', value: 2 },
   { label: 'Dstv', value: 3 },
 ];
