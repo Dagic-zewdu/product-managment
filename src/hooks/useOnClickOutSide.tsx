@@ -13,6 +13,7 @@ function useOnClickOutside<T extends HTMLElement = HTMLElement>(
   useEventListener(mouseEvent, (event) => {
     const el = ref?.current;
     let findElement = ignore.find((ig) => {
+      //@ts-ignore
       return ig === event?.target?.id;
     });
     if (findElement) return;

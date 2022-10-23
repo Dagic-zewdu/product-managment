@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import useWindowSize from '../../hooks/useWindowSize';
 import SideNav from '../sidenav';
+//@ts-ignore
 import styles from './index.module.scss';
 
 type container = {

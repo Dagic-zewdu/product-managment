@@ -1,5 +1,6 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
+//@ts-ignore
 import styles from './index.module.scss';
 
 function UploadImage() {
