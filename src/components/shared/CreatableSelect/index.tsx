@@ -37,11 +37,11 @@ function CustomCreatableSelect({
   placeholder,
   isMulti = false,
 }: props) {
-  const [Value, setValue] = useState<props['value']>(value ? value : options[0]);
-  const handleChange = (value: any) => {
+  const [Value, setValue] = useState<option>(value ? value : options[0]);
+  const handleChange = (value: option) => {
     setValue(value);
     // @ts-ignore
-    onChange(value?.label);
+    onChange(value?.value);
   };
   return (
     <CreatableSelect
@@ -51,6 +51,7 @@ function CustomCreatableSelect({
       isMulti={isMulti}
       // @ts-ignore
       options={options}
+      // @ts-ignore
       onChange={(value) => handleChange(value)}
     />
   );
