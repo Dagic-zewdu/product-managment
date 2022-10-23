@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import CreatableSelect from 'react-select/creatable';
-import { components, ControlProps, GroupBase, SingleValue } from 'react-select';
-import styles from './index.module.scss';
+// @ts-ignore
+import styles from './index.module.scss'; // @ts-ignore
+
 type option = { value: string | number; label: string; icon?: string };
 type props = {
   options: Array<option>;
