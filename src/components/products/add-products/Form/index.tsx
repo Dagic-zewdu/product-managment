@@ -33,14 +33,17 @@ function AddProductForm() {
         <UploadImage />
       </div>
       <div className="col-lg-5">
-        <div className="d-flex align-items-center mb-3" style={{ gap: 16 }}>
+        <div className="d-flex align-items-center mb-3 gp-16">
           <Input label="Id" disabled={checked} value={autoId} />
-          <input
-            type="checkbox"
-            id=""
-            checked={checked}
-            onClick={(e) => handleAutoGenereateId(e)}
-          />
+          <div className="d-flex align-items-center gp-10">
+            <input
+              type="checkbox"
+              id=""
+              checked={checked}
+              onClick={(e) => handleAutoGenereateId(e)}
+            />
+            <p className="mb-0">Auto generate id</p>
+          </div>
         </div>
         <Input label="Name" />
         <div className="d-flex align-items-center mb-3" style={{ gap: 16 }}>
@@ -53,8 +56,8 @@ function AddProductForm() {
           />
         </div>
         <Input label="Unit Price" min={1} type="number" className="" />
-        <Input label="Expired date" />
         <Input label="Selling Price" min={1} type="number" />
+        <Input label="Expired date" />
         <CustomCreatableSelect
           placeholder="Select category"
           options={options}
